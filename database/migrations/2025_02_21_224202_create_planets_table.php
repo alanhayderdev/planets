@@ -14,7 +14,10 @@ return new class extends Migration
         Schema::create('planets', function (Blueprint $table) {
             $table->id();
             $table->string('name')->unique();
+            $table->string('rotation_period');
+            $table->string('orbital_period');
             $table->string('climate');
+            $table->string('population');
             $table->timestamps();
         });
     }
